@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Login=()=>{
 
-    const paperStyle={padding :20,height:'70vh',width:280, margin:"20px auto"}
+    const paperStyle={padding :30,height:'50vh',width:280, margin:"70px auto"}
     const avatarStyle={backgroundColor:'#1bbd7e'}
     const btnstyle={margin:'8px 0'}
     return(
@@ -23,18 +23,19 @@ const Login=()=>{
                     <Grid item>
                         <TextField label='Password' placeholder='Enter password' type='password' fullWidth required/>
                     </Grid>
-                
-                
-                    <Grid item>
-                        <Button variant="contained" color="primary" type="submit">
-                            Login
-                        </Button>
+                    <Grid item container spacing={2}>
+                        <Grid item xs={6}>
+                            <Button variant="contained" color="primary" type="submit">
+                                Login
+                            </Button>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Button variant="contained" color="secondary" component={Link} to="/register">
+                                Register
+                            </Button> 
+                        </Grid>
                     </Grid>
-                    <Grid item>
-                        <Button variant="contained" color="secondary" component={Link} to="/register">
-                            Register
-                        </Button> 
-                    </Grid>
+                    
                 </Grid>
             </Paper>
         </Grid>
