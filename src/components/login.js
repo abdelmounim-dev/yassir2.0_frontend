@@ -7,7 +7,7 @@ const Login=()=>{
 
     const paperStyle={padding :30,height:'50vh',width:280, margin:"70px auto"}
     const avatarStyle={backgroundColor:'#1bbd7e'}
-    const btnstyle={margin:'8px 0'}
+    //const btnstyle={margin:'8px 0'}
     return(
         <Grid item xs={12} sm={8} md={6}>
             <Paper elevation={10} style={paperStyle}>
@@ -25,7 +25,7 @@ const Login=()=>{
                     </Grid>
                     <Grid item container spacing={2}>
                         <Grid item xs={6}>
-                            <Button variant="contained" color="primary" type="submit">
+                            <Button variant="contained" color="primary" type="submit" component={Link} to="/dashboard">
                                 Login
                             </Button>
                         </Grid>
