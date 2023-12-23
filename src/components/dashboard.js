@@ -6,13 +6,13 @@ const Dashboard = () => {
     <div>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Dashboard
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            Covoiturage
           </Typography>
-          <Button color="inherit">Navbar Item 1</Button>
-          <Button color="inherit">Navbar Item 2</Button>
-          <Button color="inherit">Navbar Item 3</Button>
-          <Button color="inherit">Navbar Item 4</Button>
+          <Button color="inherit" sx={{ ml: 3 }}>Navbar Item 1</Button>
+          <Button color="inherit" sx={{ ml: 3 }}>Navbar Item 2</Button>
+          <Button color="inherit" sx={{ ml: 3 }}>Navbar Item 3</Button>
+          <Button color="inherit" sx={{ ml: 3 }}>Navbar Item 4</Button>
         </Toolbar>
       </AppBar>
       <Box sx={{ display: 'flex', justifyContent: 'flex-end', m: 3 }}>
