@@ -9,14 +9,20 @@ const Register = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
 
-  const paperStyle = { padding: 30, height: '60vh', width: 280, margin: "70px auto" };
+  const paperStyle = { padding: 30, height: '69vh', width: 280, margin: "70px auto" };
   const avatarStyle = { backgroundColor: '#1bbd7e' };
   const btnstyle = { margin: '8px 0' };
 
   const handleRegister = async (e) => {
     e.preventDefault();
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
 
     try {
       const res = await axios.post('/api/auth/register', { firstName, lastName, phoneNumber, email, password });
@@ -56,6 +62,10 @@ const Register = () => {
           <Grid item>
             <TextField label='Password' type='password' required sx={{ width: '100%' }}
               value={password} onChange={(e) => setPassword(e.target.value)} />
+          </Grid>
+          <Grid item>
+            <TextField label='Confirm Password' type='password' required sx={{ width: '100%' }}
+              value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
           </Grid>
           <Grid item container justifyContent="center">
             <Button variant="contained" color="secondary" onClick={handleRegister} style={btnstyle}>
